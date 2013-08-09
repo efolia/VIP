@@ -1,0 +1,12 @@
+{
+"settings" :
+	{
+		"type" : "video",
+		"name" : "default"
+	},
+"rules" :
+	[
+	{	"rule" : "div#vip{background-color:#333333;border-radius:9px;-moz-border-radius:9px;-webkit-border-radius:9px;border:1px solid black;box-shadow: 8px 8px 4px #BBB;}#vip>.wrapper{padding:6px;}"
+	}
+	]
+}

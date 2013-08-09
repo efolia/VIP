@@ -1,0 +1,213 @@
+{
+"settings" :
+	{
+		"type" : "video",
+		"id" : "2589186861001",
+		"skin" : "none"
+	},
+"cuepoints" : 
+	[
+		{ "name" : "@10",
+			"metadata" :"",
+			"time" : 10
+		},
+		{ "name" : "@6",
+			"metadata" :"",
+			"time" :6
+		},
+		{ "name" : "@16",
+			"metadata" :"",
+			"time" : 16
+		},
+		{ "name" : "@21",
+			"metadata" : "",
+			"time" : 21
+		},
+		{ "name" : "@24",
+			"metadata" : "",
+			"time" : 24
+		},
+		{ "name" : "@40",
+			"metadata" : "",
+			"time" : 40
+		},
+		{ "name" : "@45",
+			"metadata" : "",
+			"time" : 45
+		},
+		{ "name" : "@51",
+			"metadata" : "",
+			"time" : 51
+		},
+		{ "name" : "@70",
+			"metadata" : "",
+			"time" : 70
+		},
+		{ "name" : "@72",
+			"metadata" : "",
+			"time" : 72
+		},
+		{ "name" : "@77",
+			"metadata" : "",
+			"time" : 77
+		},
+		{ "name" : "@85",
+			"metadata" : "",
+			"time" : 85
+		},
+		{ "name" : "@92",
+			"metadata" : "",
+			"time" : 92
+		},
+		{ "name" : "@142",
+			"metadata" : "",
+			"time" : 142
+		}
+		
+	],
+"elements" :
+	[
+		{ "type" : "slide",
+			"name" :"@init",
+			"mode" : "w",
+			"transition" : "",
+			"content" :"<center><h3>Demo 0.1</h3><h2>How to String an<br />Acoustic Guitar</h2><p>Downloaded from YouTube on Aug. 6, 2013.</p><p>Original video can be found <a href=\"http://www.youtube.com/watch?v=VVeeYkgs1es\" target=\"blank\">here</a></p><p><a onclick=\"vip.playToggle();\">Start the video</a></p></center>"
+		},
+		{ "type" : "slide",
+			"name" :"@begin",
+			"mode" : "w",
+			"transition" : "",
+			"params" : [{}],
+			"content" :"<center><h3>Putting on the new strings!</h3></center>"
+		},
+		{	"type" : "slide",
+			"name" :"@6",
+			"mode" : "w",
+			"transition" : "",
+			"params" : [{}],
+			"content" :"<center><h3>Putting on the new strings!</h3></center><br /><ul><li><b>Put the ball-end in the hole</b></li></ul>"
+		},
+		{	"type" : "slide",
+			"name" :"@10",
+			"mode" : "w",
+			"transition" : "",
+			"params" : [{}],
+			"content" :"<center><h3>Putting on the new strings!</h3></center><br /><ul><li>Put the ball-end in the hole</li><li><b>The slot in the front of the bridge pin needs to face forward</b></li></ul>"
+		},
+		{ "type" : "slide",
+			"name" :"@16",
+			"mode" : "w",
+			"transition" : "",
+			"params" : [{}],
+			"content" :"<center><h3>Putting on the new strings!</h3></center><br /><ul><li>Put the ball-end in the hole</li><li>The slot in the front of the bridge pin needs to face forward</li><li><b>Go across and put them all in</b></li></ul>"
+		},
+		{ "type" : "slide",
+			"name" :"@21",
+			"mode" : "w",
+			"transition" : "",
+			"params" : [{}],
+			"content" :"<center><p>Bridge pins come in many variations of material and colors</p></center>"
+		},
+		{ "type" : "slide",
+			"name" :"@24",
+			"mode" : "a",
+			"transition" : "",
+			"params" : [{}],
+			"content" :"<center><img src=\"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSXri9Ip9eWPtYz052xGsUT9KZwYghnOt_AY3s8Em8LhVzhLmffM2lGLt1t17Qqh_qgsDqX8jE5&usqp=CAY\" /></center>"
+		},
+		{ "type" : "slide",
+			"name" :"@40",
+			"mode" : "w",
+			"transition" : "",
+			"params" : [{}],
+			"content" :"<center><h3>Tying the strings to the tuning pegs</h3></center>"
+		},
+		{ "type" : "slide",
+			"name" :"@45",
+			"mode" : "w",
+			"transition" : "",
+			"params" : [{}],
+			"content" :"<center><h3>Tying the strings to the tuning pegs</h3></center><ul><li><b>Always work from the inside of the peg</b></li></ul>"
+		},
+		{ "type" : "slide",
+			"name" :"@51",
+			"mode" : "w",
+			"transition" : "",
+			"params" : [{}],
+			"content" :"<center><h3>Tying the strings to the tuning pegs</h3></center><ul><li>Always work from the inside of the peg</li><li><b>The string must wrap from the inside</b></ul>"
+		},
+		{ "type" : "slide",
+			"name" :"@70",
+			"mode" : "w",
+			"transition" : "",
+			"params" : [{}],
+			"content" :"<center><h3>Around the Peg</h3></center>"
+		},
+		{ "type" : "slide",
+			"name" :"@72",
+			"mode" : "w",
+			"transition" : "",
+			"params" : [{}],
+			"content" :"<center><h3>Around the Peg</h3></center><ul><li><b>Use your thumb and index to hold the strings apart</b></li></ul>"
+		},
+		{ "type" : "slide",
+			"name" :"@77",
+			"mode" : "w",
+			"transition" : "",
+			"params" : [{}],
+			"content" :"<center><h3>Around the Peg</h3></center><ul><li>Use your thumb and index to hold the strings apart</li><li><b>The first wrap should go above the loose string's end</b></li></ul>"
+		},
+		{ "type" : "slide",
+			"name" :"@85",
+			"mode" : "w",
+			"transition" : "",
+			"params" : [{}],
+			"content" :"<center><h3>Around the Peg</h3></center><ul><li>Use your thumb and index to hold the strings apart</li><li>The first wrap should go above the loose end's</li><li><b>The following wraps need to go below the loose string's end</b></li></ul>"
+		},
+		{ "type" : "slide",
+			"name" :"@92",
+			"mode" : "w",
+			"transition" : "",
+			"params" : [{}],
+			"content" : "<center><img src=\"http://c.shld.net/rpx/i/s/pi/mp/13567/1082208611?src=http%3A%2F%2Fwww.picsuitcase.com%2FImagesJ1%2FCompElect%2F41dpf15oQML._SL500_AA300_.jpg&d=bb6a4fadf89cef0ce249a2aa55bf3846e3e213ca\" /></center>"
+		},
+		{ "type" : "slide",
+			"name" :"@142",
+			"mode" : "w",
+			"transition" : "",
+			"params" : [{}],
+			"content" :"<center><h3>Proceed with order</h3></center><ul><li>Always start and complete stringing on one side before proceeding to the next, working inward.</li></ul>"
+		},
+		{ "type" : "slide",
+			"name" : "@end",
+			"mode" : "w",
+			"transition" : "",
+			"params" : [{}],
+			"content" : "<center><h1>THE END</h1><p>Hope you enjoyed this demo!</p></center>"
+		},
+		{ "type" : "section",
+			"name" : "#1",
+			"title" : "Section 1",
+			"parent" : "",
+			"content" : "@begin"
+		},
+		{ "type" : "section",
+			"name" : "#2",
+			"title" : "Section 2",
+			"parent" : "",
+			"content" : "@40"
+		},
+		{ "type" : "section",
+			"name" : "#2a",
+			"title" : "Section 2a",
+			"parent" : "#2",
+			"content" : "@44"
+		},
+		{ "type" : "section",
+			"name" : "#3",
+			"title" : "Section 3",
+			"parent" : "",
+			"content" : "@62"
+		}
+	]
+}

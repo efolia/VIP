@@ -1,0 +1,72 @@
+.clear-block {
+	float: none;
+	visibility: hidden;
+	clear: both;
+}
+
+#outerframe {
+	margin: 60px 0 0 80px;
+}
+
+#vip {
+	display:inline-block;
+}
+
+#vip>.wrapper {
+	position: relative;
+}
+#vip-status {
+	position: relative;
+	height: 1.24em;
+	width: auto;
+}
+#vip-status div.toggle {
+	color: white;
+	display: inline-block;
+	padding: 0 .75em;
+	
+}
+
+#vip-toc,
+#vip-playlist {
+	display: none;
+	
+}
+#vip-tabs {
+	float:left;
+	width:360px;
+	border: 1px solid silver;
+	height: 400px;
+	position: relative;
+}
+#vip-tabs .wrapper {
+	overflow: hidden;
+}
+#vip-video {
+	float:left;
+	width:auto;
+	border: none;
+	overflow: hidden;
+	height: 400px;
+}
+#vip-other {
+	float:left;
+	display:none;	
+}
+.slide {
+	font-size: 16px;
+}
+.slide.wrapper {
+	padding: 2em;
+}
+
+
+#controls {
+	position: absolute;
+	bottom: 15px;
+	width: 100%;
+	text-align: center;
+}
+#controls .disabled {
+	background-color: #CCCCCC;
+}

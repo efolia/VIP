@@ -1,0 +1,37 @@
+cue points (C) handlers:
+
+properties:
+currentC = NULL; // current/last cue point
+nextC = NULL; // next cue point
+
+methods:
+clearC(); // clear all pre-existing cue points
+addC([c]); // add array of cue points (c)
+
+
+
+position (P) handlers:
+
+properties:
+currentP = NULL; // current position
+
+methods:
+gotoP(p); // moves the pointer to absolute position p (ms)
+
+video state (V) handlers:
+
+properties:
+currentV = NULL; // video's current state
+
+methods:
+pauseV(v); // pauses video by identifier v
+playV(v); // start/resume video play by identifier v
+
+
+==================
+
+pattern:
+load data for current video
+clear cue points
+create presentation cue points (data.c)
+

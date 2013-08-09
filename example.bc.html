@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<script type="text/javascript"
+src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+<body>
+
+
+       <object id="myExperience" class="BrightcoveExperience">
+         <param name="bgcolor" value="#FFFFFF" />
+         <param name="width" value="486" />
+         <param name="height" value="412" />
+         <param name="playerID" value="1229793604001" />
+         <param name="playerKey"
+value="AQ~~,AAAAi6Tjh8k~,R20jlJ9UP6idyP-ths6bfL4Lw8zBLj5G" />
+         <param name="isVid" value="true" />
+         <param name="dynamicStreaming" value="true" />
+         <param name="@videoPlayer" value="601206666001" />
+         <param name="templateLoadHandler" value="onTemplateLoad" />
+         <param name="templateReadyHandler" value="onTemplateReady" />
+         <param name="includeAPI" value="true" />
+       </object>
+         
+ <br>
+
+
+       <h4> Debug Console</h4>
+       <p id="debugOutput"></p>
+  
+
+ 
+
+</body>
+
+<script type="text/javascript">
+
+brightcove.createExperiences();
+
+var player;
+var videoPlayerModule;
+var experienceModule;
+var cuePointsModule;
+
+var currentVideo;
+// Hold a reference to the APIModules namespace
+var APIModules
+
+function onTemplateLoad(id) {
+
+   APIModules = brightcove.api.modules.APIModules;
+   player = brightcove.api.getExperience(id);
+   experienceModule = player.getModule(APIModules.EXPERIENCE);
+   cuePointsModule = player.getModule(APIModules.CUE_POINTS);
+   videoPlayerModule = player.getModule(APIModules.VIDEO_PLAYER);
+
+
+}
+
+function onTemplateReady(event) {
+   // Get the current video loaded into the player. The id is needed to
+   // manipulate its cue points.
+   videoPlayerModule.getCurrentVideo(onGetCurrentVideoResult);
+
+}
+
+// Callback function for when videoPlayerModule.getCurrenVideo() is ready.
+function onGetCurrentVideoResult(video) {
+   currentVideo = video;
+   if(currentVideo) {
+       cuePointsModule.getCuePoints(currentVideo.id, cuePointsHandler);
+   }
+}
+
+function cuePointsHandler(cuePoints) {
+       // Display existing cue points
+       displayExistingCuePoints(cuePoints);
+       // Clear existing cue points, code and ad ones
+       cuePointsModule.clearCodeCuePoints(currentVideo.id);
+       cuePointsModule.clearAdCuePoints(currentVideo.id);
+       // Add new code cue points at 25%, 50%, 75% and 100% of the video length.
+       addNewCuePoints();
+ }
+
+
+function displayExistingCuePoints(cuePoints) {
+   for (var i in cuePoints) {
+       displayCuePoint(cuePoints[i]);
+   }
+}
+
+function displayCuePoint(cuePoint) {
+   log("Cue Point Name: " + cuePoint.name +
+                  " Metadata: " + cuePoint.metadata +
+                  " Type: " + cuePoint.type +
+                  " Time: " + cuePoint.time);
+}
+
+// Adds code cue points at 25%, 50%, 75% and 100% of the current video length.
+function addNewCuePoints() {
+   var CuePointType = brightcove.api.modules.CuePointsModule.CuePointType;
+
+   var videoLengthInSec = currentVideo.length/1000;
+   var firstQuartile = videoLengthInSec/4;
+   var secondQuartile = videoLengthInSec/2;
+   var thirdQuartile = (videoLengthInSec/4) * 3;
+
+   var cuePoints = [{name:"First Quartile", metadata:"NEW",
+time:firstQuartile, type:CuePointType.CODE},
+                    {name:"Second Quartile", metadata:"NEW",
+time:secondQuartile, type:CuePointType.CODE},
+                    {name:"Third Quartile", metadata:"NEW",
+time:thirdQuartile, type:CuePointType.CODE},
+                    {name:"End", metadata:"NEW",
+time:videoLengthInSec, type:CuePointType.CODE}];
+   cuePointsModule.addCuePoints(currentVideo.id, cuePoints);
+
+   // Add callback function to listen for cue points.
+   videoPlayerModule.addEventListener(brightcove.api.events.CuePointEvent.CUE,
+onCuePointEvent);
+}
+
+// Callback function that gets fired when each cue point is reached
+function  onCuePointEvent (cuePointEvent) {
+ displayCuePoint (cuePointEvent.cuePoint);
+}
+
+function log(message) {
+   var output = document.getElementById('debugOutput');
+   output.innerHTML +=  message + '</br>';
+   console.log(message);
+}
+
+</script>
+</html>
