@@ -1,0 +1,21 @@
+{
+"media" :
+	[
+		{ "type" : "video",
+			"id" : "122252332243",
+			"title" : "My first VIP video",
+			"order" : 1,
+			"image" : "http://google.com/images/123",
+			"description" : "This is a video about stuff I made last week.",
+			"source" : "http://some.url"
+		},
+		{ "type" : "video",
+			"id" : "332252523425",
+			"title" : "My second VIP video",
+			"order" : 2,
+			"image" : "http://google.com/images/123",
+			"description" : "This is another video about stuff I made the week before last.",
+			"source" : "http://some-other.url"
+		}
+	]
+}
